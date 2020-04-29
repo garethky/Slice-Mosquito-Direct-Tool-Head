@@ -1,51 +1,54 @@
 ## Hardware Required
-* Slice Mosquito Hot End. Note that the cooling fan, thermistor and heater cartridge are not included and need to be purchased seperatly. If using their thermistor, some tweaking of the Duet3D firmware is required to properly sense temps. It does come with all the 2.5mm screws you will need to mount it.
-* All geared parts from the Bondtech BMG, they can be ordered as 'Spare Parts' (or from one of their distributors) on their website and wont cost as much as an entire BMG extruder:
-    * Bondtech Gear Set for M5 shaft
-    * Spur Gear for the stepper
-    * Reduction Shaft with plastic reduction gear
-    * M3 Idler Pivot shaft - 32mm (This will be cut down to 24mm and used on idler)
-    * 2 x 5mm Bearings
-    * Tension adjustment spring and knob
-* A NEMA 17 stepper, preferrable a "pancake" 25mm stepper. Longer ones will work but add weight.
-* M3 socket head cap screws:
-    * 2 x 40mm
-    * 4 x 25mm
-    * 7 x 10mm
-* M3 hex drive flat head screws
-    * 5 x 5mm
-* 1 x M6 x 5mm flat tip set screw
-* 4 x M2.5 x 5mm socket head cap screws (You can use the 2 different lengths from the Mosquito kit, use the 5mm to mount the Mosquito mounting and the longer ones for the fan)
-* 2 x M2.5 x 5.5mm brass inserts, such as these: https://www.amazon.com/dp/B07NBPGTY2
-* 1 x M3 x 4mm brass threaded insert, such as these: https://www.amazon.com/dp/B077CJV3Z9
-* 1 x PC4-M10 Fitting
-* Short length of PTFE tubing
+* [Slice Mosquito Hot End](https://www.sliceengineering.com/collections/mosquito-the-professional-hotend). It does come with all the 2.5mm screws you will need to mount it. Note that the [cooling fan](https://www.sliceengineering.com/collections/accessories/products/fan-for-mosquito-hotend%E2%84%A2), [thermistor](https://www.sliceengineering.com/collections/accessories/products/thermistor-high-temperature) and [heater cartridge](https://www.sliceengineering.com/collections/accessories/products/50w-heater-cartridge) are not included and need to be purchased seperatly. E3D header cartriges and thermistors will work but the fan is particularly difficult to source so make sure your get that.
+* Bondtech BMG Parts. They can be ordered as 'Spare Parts' directly from Bondtech (or from one of their local distributors like Filastruder) and wont cost as much as an entire BMG extruder:
+    * 1 x [Bondtech Gear Kit 1.75/5.0](https://www.bondtech.se/en/product/drivegear-kits/) thats for 1.75mm filament and M5 shafts. The idler shaft included in the kit will no be used.
+    * 1 x [Motor Gear](https://www.bondtech.se/en/product/motor-gear/) for the stepper
+    * 1 x [Reduction Shaft Assembly](https://www.bondtech.se/en/product/shaft-assembly/) with plastic reduction gear
+    * 1 x [3.0x32 Shaft](https://www.bondtech.se/en/product/shafts/) You will need to cut this down to 24mm and used on idler. This is the size that Prusa uses but its not a standard Bondtech part.
+    * 2 x [5mmx8mmx2mm Bearings](https://www.bondtech.se/en/product/ballbearing-5x8x2-5/)
+    * 1 x [Thumb Screw Assembly](https://www.bondtech.se/en/product-category/spare-parts/bondtech-spare-parts/thumbscrew-assembly/)
+* A NEMA 17 stepper, preferrable a "pancake" 25mm stepper. Longer ones will work but add weight. Such as the [LDO-42STH25-1404MAC](https://www.bondtech.se/en/product/nema-17-motor-slim-power-ldo-42sth25-1404mac-0-9-degree/)
+* * Hardware 
+    * M3 socket head cap screws:
+        * 4 x 35mm
+        * 2 x 30mm
+        * 1 x 20mm (a button head would also work and look cooler!)
+        * 2 x 10mm
+    * Melt in Brass inserts for plastics
+        * 2 x M2.5 x 5.5mm brass inserts, such as these: https://www.amazon.com/dp/B07NBPGTY2
+        * 1 x M3 x 4mm brass threaded insert, such as these: https://www.amazon.com/dp/B077CJV3Z9
+* Short length of PTFE tubing (~30mm)
+* 8mm x 3mm Magnet (This size is [not uncommon](https://www.amazon.com/s?k=8mm+x+3mm+neodymium+magnets))
+* 7+ small zip ties
 
 ## Printing The Parts
-Every part has a face that was designed to print down on the print bed to help eliminate the need for supports. the SLT files should correctly orient the parts in your slicer when imported.
+Every part has a face that was designed to print down on the print bed to help eliminate the need for supports. The SLT files should correctly orient the parts in your slicer when imported.
 
 The extruder parts were designed to be printed in PETG. The Fan Shoud should only be printed in ASA, ABS or another hight temp filament.
 
-I suggest using these settings:
+I suggest using these settings for the extruder parts:
 * 0.4mm nozzle
 * 0.2mm layer height
 * 3 perimeters (hot melt inserts need some material to melt into)
-* 20% Grid infill
+* 20% Gyroid or Grid infill
 
 # Assembly
 ## Prepare the Stepper Motor
-1. Install the drive gear on the stepper shaft such that the far face of the drive gear is 17mm from the face of the stepper motor. The teeth of the drive gear should point away from the stepper.
+1. Install the drive gear on the stepper shaft so the toothed end faces the stepper and just clears the face of the stepper.
+
+## Mosquito Preparation
+1. Install the heater and thermistor in the orientation shown. Follow Slice Engineerings instructions for doing this.
 
 ## Prepare the Hot End Block
-1. Install the magnet in the Hot end Block. It should be a press fit. Verify the magenet polarity with the Dock before installing. You can put the magent flat on a table and press the Hot End Block onto it.
-1. The extruder uses a very short length of PTFE tube to guide the filament into the Mosquito. The PTFE needs to be cut for length such that it fits into the 1mm deep pocket on top of the Mosquito, here is how to do that easily:
+1. Install the magnet in the Hot End Block. It should be a press fit. Verify the magenet polarity with the Dock before and after installing. Use some thin CA glue to lock the magnet in permanently. There is a hole in in the block that allows the magnet to be pushed out and for glue to get in.
+1. The extruder uses a very short length of PTFE tube to guide the filament into the Mosquito. The PTFE needs to be cut for length such that it fits into the 1mm deep pocket on top of the Mosquito, here is how to do that easily without measuring:
 	1. Start with a longer length of PTFE tube thats easier to handle.
 	1. Cut one end square.
 	1. Fully insert the square end of the PTFE tube into the bottom of the Hot End Block.
-	1. Finally, cut the PTFE to final length by lining up a razor blade with the two locating bumps on the Hot End Block and cutting through the PTFE. The bumps stick out 1mm and act as a guide.
+	1. Cut the PTFE to final length by lining up a razor blade with the two locating bumps on the Hot End Block and cutting through the PTFE. The bumps stick out 1mm and act as a guide.
 1. With the PTFE tube in place (this helps to prevent the thin walls from melting!), install the M2.5 brass threaded inserts for the Mosquito.
 1. Install the M3 threaded insert for the Idler tension knob.
-1. Install the Mosquito onto the Hot End Block with the M2.5 x 5mm bolts included with the Mosquito kit. Make sure the heater cartridge/thermistor face the idler side of the extruder.
+1. Install the Mosquito onto the Hot End Block with the M2.5 x 10mm bolts included with the Mosquito kit (the longest ones). Make sure the heater cartridge/thermistor face the idler side of the extruder.
 
 ## Prepare the Idler
 1. Place the Bontech idler gear with its two needle bearings into its final location in the idler. The geared section goes away from the dock. Verify with the Hot End Block.
