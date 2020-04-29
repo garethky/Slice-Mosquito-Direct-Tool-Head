@@ -1,125 +1,35 @@
 # About 
-This is an tool designed for the E3D Tool Changer platform. It used the Bondtech Mini Gear (BMG) drive parts and the Slice Engineering Mosquito for a compact and light weight direct drive tool head. The Project was designed in OnShape and you can get the 
+This is a tool designed for the E3D Tool Changer platform. It uses the Bondtech Mini Gear (BMG) drive parts and the Slice Engineering Mosquito for a compact and light weight direct drive extruder. The project was designed in OnShape and you can get the source here:
 
 * CAD file in [Onshape](https://cad.onshape.com/documents/296b560eee7721bd4ef989d0/w/77731089a76ed16562e3d253/e/473682607ad5dddc5a373102)
-* Discussion thread is here: [BMG + Mosquito + Tool Changer](https://forum.e3d-online.com/threads/bmg-mosquito-tool-changer.3411/)
-* STL files and these instructions are maintained on [GitHub](https://github.com/garethky/Slice-Mosquito-Direct-Tool-Head), you can also file an issue there.
+* STL files, this readme and these instructions are maintained on [GitHub](https://github.com/garethky/Slice-Mosquito-Direct-Tool-Head), you can also file an issue there.
 
-This work is licensed under [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/?ref=ccchooser)
+This work is licensed under [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)
 
 ## Goals
-* Geared direct drive - smaller stepper means lighter weight tool head which can print faster.
-* Use the stock dock in its stock location
-* Keep the nozzle location as close as possible to the stock location to enable sharing of wipers and preserve print volume. (tested as within 0.7mm in Z)
-* Keep mass near the center of the kinematic coupling to limit wobble and print artifacts.
+* Geared direct drive: can print faster and more precisely.
+* Use the stock dock pins in its stock location. No dock mods required.
+* Keep center fo mass near the center of the kinematic coupling to limit wobble and print artifacts.
 * Light weight. Measured as 375g with a 25mm stepper including tool changer plate.
 
-## Project Status: Prototype
-Currently this project is a prototype. Several things are untested or need to be evaluated, including:
-* The cooling fan location, orientation and the fan shroud design.
-* The Front Frame gets close to the heat block. Testing is needed to make sure its safe from melting at high temps.
-* Bolts engage with the stepper to a depth of 4mm with an intended safety margin of 1mm. If we find steppers with shallower holes than 5mm this engagement should be adjusted for clearance
-* General tolerances of bolt heads and shafts are tunable in the design. They print acceptable on my Prusa MK3S but might not have enough tolerance for your printer.
+## Project Status: Beta
+Currently this project is in the Beta phase. Now is a good time to print an extruder and try it out for yeourself. Before this release, several protptypes were printed and tested to failure. Improvements to the design have been made that should overcome these issues. Numberous printability tweaks have been made to eliminate the need for support matieral when printing. Printability, usability and general fit/finish should be fine for general use.
 
-## Known Issues
-* The Fan Shroud design is very much a prototype and needs supports to print.
-* The bearing seat on the Stepper Frame prints face down and is still having issues printing cleanly without supports.
-* The thermistor connector is in an awkward spot an may need an additional cable hold down.
+## Required Parts, Priting & Assembly
+See Assembly Instructions.
 
-## Hardware Required
-* Slice Mosquito Hot End. When you go to buy one, note that the cooling fan, thermistor and heater cartridge are not included. If using their thermistor, some tweaking of the Duet3D firmware is required to properly sense temps. It does come with the 2.5mm screws you will need to mount it.
-* All geared parts from the Bondtech BMG, they can be ordered as 'Spare Parts' on their website and wont cost as much as an entire BMG extruder:
-    * Bondtech Gear Set for M5 shaft
-    * Reduction Shaft with plastic reduction gear
-    * M3 Idler shaft - 20mm
-    * M3 Idler Pivot shaft - 32mm
-    * Spur Gear for the stepper
-    * 2 x 5mm Bearings
-    * Tension adjustment spring and knob (ditch the plastic washer)
-* A NEMA 17 stepper that is at least 25mm long. Longer ones will work but add weight.
-* M3 socket head cap screws:
-    * 2 x 40mm
-    * 4 x 25mm
-    * 7 x 10mm
-* M3 hex drive flat head screws
-    * 5 x 5mm
-* 1 x M6 x 5mm flat tip set screw
-* 4 x M2.5 x 5mm socket head cap screws (You can use the 2 different lengths from the Mosquito kit, use the 5mm to mount the Mosquito mounting and the longer ones for the fan)
-* 2 x M2.5 x 5.5mm brass inserts, such as these: https://www.amazon.com/dp/B07NBPGTY2
-* 1 x M3 x 4mm brass threaded insert, such as these: https://www.amazon.com/dp/B077CJV3Z9
-* 1 x PC4-M10 Fitting
-* Short length of PTFE tubing
+# Tool Changer / Duet Setup
+## Slice Thermistor Setup with Duet
+I used the thermistor from the V6 hot end kit so I wouldn't have to mess with calibrating the one from Slice Engineering. RepRap Confguratior has the settings you need, you can generate a config a pull the line out. Looks like this:
 
-## Printing The Parts
-Every part has a face that was designed to print down on the print bed to help eliminate the need for supports. A couple of spots require some bridging and could be improved.
+```
+M305 S"T1" P1 T500000 B4723 C1.196220e-7 R4700 
+```
 
-I suggest using these settings:
+## Tool Location
+This tool sticks out further from the dock than the stock V6 tool. You'll need to edit `tpreN.g` and `tfreeN.g` to change the location where the tool is collected. Please don't copy directly and send me hate mail, use the calibration procedure outlined by E3D to work out the correct offsets for your printer.
 
-* 4 perimeters - The front frame that holds up the Mosquito, in particular, needs the extra wall thickness to not flex
-* 20% Grid infill
-
-In addition to these parts you will need the [V6 Cable Support](https://github.com/e3donline/ToolChanger/blob/master/V6%20Tool/STLs/V6%20Cable%20Support.stl) and the [V6 Dock Cables(Mirror).stl](https://github.com/e3donline/ToolChanger/blob/master/V6%20Tool/STLs/V6%20Dock%20Cables%28Mirror%29.stl) (alternately you can not use the Dock Cables for routing the PTFE tube)
-
-### Fan Shroud Special Notes
-* Use ASA or ABS
-* Fan Shroud requires supports under the two mounting legs. You can use support enforcers in your slicer or set the support angle limit to something small like 10 degrees.
-
-# Assembly
-## Prepare the Stepper Motor
-1. The stepper shaft needs to be cut so that it is at most 20mm long. If not cut, the shaft will collide with the Mosquito and you wont be able to assemble the extruder.
-1. Install the drive gear on the stepper shaft such that the far face of the drive gear is 17mm from the face of the stepper motor. The teeth of the drive gear should point away from the stepper.
-
-## Prepare the Front Frame
-1. The extruder uses a very short length of PTFE tube to guide the filament into the Mosquito. The PTFE needs to be cut for length such that it fits into the 1mm deep pocket on top of the Mosquito, here is how to do that easily:
-	1. Start with a longer length of PTFE turbe thats easier to handle.
-	1. Cut a point in one end of the PTFE to fit the Bondtech drive area.
-	1. Install the PTFE in its final location and check alignment and stick-out with the Bondtech gear on the reduction shaft. 
-	1. Then cut the PTFE to final length by lining up a razor blade with the two locating bumps on the Front Frame and cutting through the PTFE. (The bumps stick out 1mm)
-1. With the PTFE tube in place (this helps to prevent the thin walls from deforming!), install the M2.5 brass threaded inserts for the Mosquito.
-1. Install the PC4-M10 Fitting into the top of the Front Frame
-1. Install the M3 threaded insert for the tension mechanism (located adjacent to the PC4-M10 Fitting)
-1. Install the Mosquito into the Front Frame with the M2.5 x 5mm bolts included with the Mosquito kit. Make sure the heater cartridge faces the front of the extruder (should be the face that was down when the part was printed)
-
-## Prepare the Idler Tension Bar
-1. Install the M3 x 32mm shaft (the long one) in the pivot of the tension mechanism. The shaft should be centered.
-2. Place the Bontech idler gear with its two needle bearings into its final location in the idler.
-3. Insert the short shaft through the assembly so that it does not protrude from either side of the plastic part.
-
-## Assemble the Drive Line
-1. Use 1 M3 x 10mm screw to bolt the Stepper Frame to the stepper. The bearing seat in the frame and the power connector on the stepper should be pointing in the same direction when you look at the shaft side of the stepper. Place the back of the stepper on the work surface and orient the power connector "up" (following directions in this section reference this orientation).
-1. Bolt the Mid Frame to the stepper frame with 1 x M3 x 25mm screw placed in the lower right corner.
-1. Place one of the bearings on the back end of the reduction shaft. Install the bearing & shaft into the bearing seat in the Stepper Frame.
-1. Install the Bondtech drive gear and second bearing onto the shaft.
-1. Install the Idler Tension Bar into its pocket.
-1. Place bolts through the front frame: 2 x M3 x 40mm on the left side holes and 2 x M3 x 25mm on the right side.
-1. Place the front frame onto the assembly and tighten the 4 bolts. The idler tension arm should swing freely.
-
-## Align the Bondtech Drive Gear
-1. Insert a piece of filament through the filament path
-1. Observe the drive hob and make sure it is centered on the filament. If not, loosen the set screw on the Bondtech drive gear and adjust its location. If you have issues, make sure both bearings are fully seated. The reduction gear and the drive gear set the effective working length of the shaft, this can be slightly shorter than the distance between the faces of the fully seated bearings. Some play is actually a good thing, this allows the gear to move to the crown of the filament and always be aligned.
-1. Tighten the set screw on the drive gear
-1. Close the idler and apply gentle pressure with your thumb. Use the reduction gear to drive the filament back and forth. You should observed that the Bondtech idler gear's back face aligns perfectly with the face of the drive gear, indicating both gears are  aligned on the filament. There is sufficient combined slop in the idler assembly to align with the drive gear.
-
-## Final Assembly
-
-1. Screw the M6 set screw into the Dock Receiver and check that it is flush with the face that meets the dock. Check that the receiver slides onto the dock pins and latches correctly.
-1. Attach the Dock Receiver to the Stepper Frame with 1 x M3 x 10mm screw.
-1. Use the 5 x M3 x 5mm flat head screws to attach the Tool Changer plate to the side of the extruder.
-1. Attach the fan mounting plate to the bottom of the extruder with 2 x M3 x 10mm screws.
-1. Attach the Fan and Fan Shroud to the fan mounting plate with 2 x M2.5 x 5 mm screws.
-1. Install the spring and M3 x 25mm screw through the top hole in the Idler Tension Arm into the threaded insert.
-1. Install the heater cartridge and temp sensor in the Mosquito per their directions.
-1. Mount the Cable support from the stock V6 extruder to the top of the extruder with 4 x M3 x 10mm screws.
-
-## Wiring
-Use the 3 small cable tie mounts to secure the wiring. The heater cartridge wires come up the front face of the extruder and can be combined with both cooling fan and the thermistor. The thermistor connection is short and has to be made in front of the extruder. The other cables are long enough to reach to the top of the extruder to be connected.
-
-# Setup Notes
-I used the thermistor from the V6 hot end kit so I wouldn't have to mess with calibrating the one from Slice Engineering.
-
-This tool sticks out further from the dock than the stock V6 tool. You'll need to edit `tpreN.g` and `tfreeN.g` to change the location where the tool is collected. Please don't copy directly and send me hate mail, use the calibration procedure to work out the correct offsets for your printer.
-
-tpreen.g
+tpreeN.g
 ```
 ;Move in
 G1 X214.5 Y220 F50000
@@ -128,12 +38,74 @@ G1 X214.5 Y220 F50000
 G1 X214.5 Y233 F2500
 ```
 
-tfreen.g
+tfreeN.g
 ```
 G53 G1 X214.5 Y220 F50000
 G53 G1 X214.5 Y233 F5000
 ```
 
-You'll also need to tweak the Z offset in `config.g`. I ended up with an offset of `5.70`. So the tool head appears to be about 0.7mm longer than stock with an E3D Nozzle X installed. Be careful and set the offsets correctly to avoid a crash.
+## Z Offset
+You'll also need to tweak the Z offset in `config.g`. I ended up with an offset of about `4.1` with ab E3D Nozzle X installed. Be careful and set the offsets correctly to avoid a crash.
+
+# Printing & Slicing Settings
+
+##Max Acceleration##
+This needs to be high enough that your extruder can reach your desired retract speed for the majority of your retract length. Retracts are generally the most demanding speed changes on an extruder axis. You can use the calculator here to build an intuitive sense for how that works: https://blog.prusaprinters.org/calculator/#speed
+
+Suggested value: **5000mm/s^2**
+
+That enough acceleration to reach 35mm/s in a 0.4mm retract and stay there for a about ~35% of the distance. If you do longer, slower retracts you might be able to go down on this a bit. 
+
+Low extruder acceleration has several bad effect on print quality that you can see, including:
+* weak infill (extruder cannot accelerate fast enough)
+* over extrusion on solid layers (deceleration not fast enough leading to ooze)
+* lots of extra plastic clining to the nozzle and ruining the print (ooze)
+* bad seams
+* Print speed slows when pressure advance is turned on
+
+If you are having these issues try raising the extruder acceleration even further.
+
+## Max Instantanious Acceleration ##
+Also known as "Jerk", this is an exception to regular acceleration. If the change in speed required falls within this range the stepper will be commanded to do it instantly without breaking it up over multiple steps.
+
+Values between 1mm/s and up to 3mm/s seems to work well for this extruder. Duet takes this in minutes so we must multiply it by 60:
+
+Suggested value: **90mm/min** (i.e. 1.5mm/s)
+
+High jerk values can cause unecessary wear on the extruder. You can hear this as clicking/clunking of the extruder geartrain as it snaps in the opposite direction on a retract or deretraction. I've seen profiles setting this as high as 8000 (133mm/s). Any value higher than the retract speed should, in theory, negate the acceleration setting. If you set acceleration high enough you wont need to set this very high at all.
+
+## Expect to Print Hotter
+You may need to raise the print temp by 5°C to 10°C over what you might have used with a V6. The most noticable artifacts of low print temps is poor layer adhesion and gaps at seams.
+
+I'm not sure if this is related to the cooling fan arrangement, the part cooling fan or the Mosquito itself.
+
+## Set Retractions Shorter than a V6
+Slice recommend using the nozzle diameter as the retraction ammount. 0.4mm nozzle  == 0.4mm retracts.
+
+But what about more difficult filaments like PETG? Try starting with just double the nozzle diameter. If you still get stringing try reducing retraction speeds to 25mm/s. (my PETG sweet spot is 0.8mm, 25mm/s) Too much retraction distance can tear the filaments inside the hot zone and lead to bubbles. You will head a "popping" sounds when the bubble is extruded. If you get popping and voids in your prints, try reducing retract length.
+
+## Pressure Advance
+When you have dialed in all of the above variables its time to tune pressure advance with a test print. I like the one that the Marlin team put out: https://marlinfw.org/tools/lin_advance/k-factor.html. You'll have to edit the .gcode for the Duet but its not hard once you have a slicer set up with custom GCode that you can copy from. A good range of values to test is is probably 0.01s to 0.1s.
+
+Suggested value = **0.055s**
+
+This was foud in PETG with 20mm/s vs 80mm/s speeds.
+
+# FAQ
+## Will you adapt this design for the E3D V6?
+The V6 really mounts differently and the extruder would have to be split along the filament path to capture the heatbreak mount. Thats a very big change and it wont be easy to maintain. You're free to fork the design if you like.
+
+## Is this done, will there be changes?
+Oh there are going to be changes... when I get time:
+1. Prusa Labs has released their filament sensor as open source and inexpensive third party kits are available. This will enable automated filament loading and unloading and filament runout detection. The next major release will have the filament sensor integrated as an optional add-on.
+2. I'm not satisfied with the way the filament enters the extruder. This release eliminated the push fit connector I was using. Bondtech's connector is inexpensive and is being evaluated. for now simply using no connector is fine and makes filament swaps easier.
+3. The Cable Support that attaches the metal band and wiring loom is something I want improve and possible integrate into the motor plate. The extra part and fasteners dont seem to be beneficial.
+
+## How about Duet 3 Tool Board support?
+I like the concept but the boards are kind of large. My worry with this is mostly about hwere to put it without making the whole package larger.
+
+## That Mosquito Fan is a mennace
+A mod to run a quieter fan would be something that interests me too. Slice recommend running their fan at 70% (per https://www.sliceengineering.com/pages/documentation). Only the main Duet 2 board has PWM controlled ports for the hot end coolers to permit this. The Duet 3 expansion board had PWM fan ports. I'm upgrading to the Duet 3 and I'll be evaluating the noise att he 70% setting before I try hacking in a quiter fan. To have any benefit we would have to go up to the smallest Noctua fan.
+
 
 # Happy Printing!
