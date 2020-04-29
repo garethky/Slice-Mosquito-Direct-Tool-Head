@@ -9,12 +9,14 @@ The project was designed in OnShape and you can get the source here:
 
 This work is licensed under [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)
 
-## Goals
-* Geared direct drive: can print faster and more precisely.
-* Use the stock dock pins in its stock location. No dock mods required.
-* Keep center of mass near the center of the kinematic coupling to limit wobble and print artifacts.
-* Light weight. Measured as 400g with a 25mm stepper including tool changer plate.
-* Easy to print with no required support material in PETG filament.
+## Why Build One?
+* It's a geared direct drive extruder that can print faster and more precisely that the stock bowden tooling.
+* The Mosquito hot end makes it very easy to swap nozzles without worrying about filament oozing out of your hot end. "Volcano" version of the Mosquito has the same nozzle hight so they can share wipers/brushes.
+* It uses the stock dock pins in its stock location. No dock mods required.
+* Light weight. Measured as 400g all up weight with tool plate.
+* 5015 part cooling for quiet and powerful cooling.
+* Compact size, wont steal space from other tools or collide with the printer frame.
+* Designed for manufacture on FDM printers with no required support material in PETG filament.
 
 ## Project Status: Beta
 Currently this project is in Beta. Now is a good time to print an extruder and try it out for yourself. Before this release, several prototypes were printed and tested to failure. Improvements to the design have been made that should overcome these issues. Numerous print-ability tweaks have been made to eliminate the need for support material when printing. Print-ability, usability and general fit/finish should be fine for general use. I'm installing printing 4 on my tool changer so I can work on multi-material and multi-color printing.
@@ -23,6 +25,9 @@ Currently this project is in Beta. Now is a good time to print an extruder and t
 See the [Assembly Instructions](assembly-instructions.md)
 
 # Tool Changer / Duet Setup
+## Tool Clearance
+This tool has a motor that sticks out over the tool changer head and interferes with the stock X-Carriage Cable Bracket. A remix of that part is included as a drop in replacement for the stock part.
+
 ## Slice Thermistor Setup with Duet
 If using, the [RepRap Configurator](https://configtool.reprapfirmware.org/Heaters) has the settings you need, you can generate a config a pull the thermistor line out. Looks like this:
 
