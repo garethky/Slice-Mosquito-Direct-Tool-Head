@@ -1,9 +1,10 @@
 # About
 
-<a href="images/extruder-front.jpg"><img alt="Extruder Front" height="320" src="images/small/extruder-front.jpg"/></a>
-<a href="images/extruder-left.jpg"><img alt="Extruder Left" height="320" src="images/small/extruder-left.jpg"/></a>
-<a href="images/extruder-pair-back.jpg"><img alt="Extruder Pair Back" width="320" src="images/small/extruder-pair-back.jpg"/></a>
-<a href="images/extruder-pair-left.jpg"><img alt="Extruder Pair Side" width="320" src="images/small/extruder-pair-left.jpg"/></a>
+<a href="https://raw.githubusercontent.com/garethky/Slice-Mosquito-Direct-Tool-Head/master/images/extruder-front.jpg"><img alt="Extruder Front" height="320" src="images/small/extruder-front.jpg"/></a>
+<a href="https://raw.githubusercontent.com/garethky/Slice-Mosquito-Direct-Tool-Head/master/images/extruder-left.jpg"><img alt="Extruder Left" height="320" src="images/small/extruder-left.jpg"/></a>
+
+<a href="https://raw.githubusercontent.com/garethky/Slice-Mosquito-Direct-Tool-Head/master/images/extruder-pair-back.jpg"><img alt="Extruder Pair Back" width="320" src="images/small/extruder-pair-back.jpg"/></a>
+<a href="https://raw.githubusercontent.com/garethky/Slice-Mosquito-Direct-Tool-Head/master/images/extruder-pair-left.jpg"><img alt="Extruder Pair Side" width="320" src="images/small/extruder-pair-left.jpg"/></a>
 
 This is a tool designed for the E3D Tool Changer platform. It uses the Bondtech Mini Gear (BMG) drive parts and the Slice Engineering Mosquito for a compact and light weight direct drive extruder.
 
