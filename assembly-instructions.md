@@ -60,42 +60,53 @@ I suggest using these settings for the extruder parts:
 ## Prepare the Hot End Block
 
 <a href="images/assembly/install-magnet.jpg"><img alt="install magnet" width="320" src="images/assembly/small/install-magnet.jpg"/></a>
-<a href="images/assembly/how-to-cut-ptfe.jpg"><img alt="how to cut ptfe" width="320" src="images/assembly/small/how-to-cut-ptfe.jpg"/></a>
-<a href="images/assembly/brass-inserts.jpg"><img alt="brass inserts installed" width="320" src="images/assembly/small/brass-inserts.jpg"/></a>
 
 1. Install the magnet in the Hot End Block. It should be a press fit. Verify the magnet polarity with the Dock before installing. Use some thin CA glue to lock the magnet in permanently if desired. There is a hole in in the block that allows the magnet to be pushed out if polarity is wrong and for glue to get in.
-1. The extruder uses a very short length of PTFE tube to guide the filament into the Mosquito. The PTFE needs to be cut for length such that it fits into the 1mm deep pocket on top of the Mosquito, here is how to do that easily without measuring:
+
+<a href="images/assembly/how-to-cut-ptfe.jpg"><img alt="how to cut ptfe" width="320" src="images/assembly/small/how-to-cut-ptfe.jpg"/></a>
+
+2. The extruder uses a very short length of PTFE tube to guide the filament into the Mosquito. The PTFE needs to be cut for length such that it fits into the 1mm deep pocket on top of the Mosquito, here is how to do that easily without measuring:
 	1. Start with a longer length of PTFE tube thats easier to handle (30+mm).
 	1. Cut one end square.
-	1. Fully insert the square end of the PTFE tube into the bottom of the Hot End Block.
+	1. Fully insert the square end of the PTFE tube into the bottom of the Hot End Block untill it stops (about 20mm).
 	1. Cut the PTFE to final length by lining up a razor blade with the two locating bumps on the Hot End Block and cutting through the PTFE. The bumps stick out 1mm and act as a guide.
-1. With the PTFE tube in place (this helps to prevent the thin walls from melting!), install the M2.5 brass threaded inserts for the Mosquito.
-1. Install the M3 threaded insert for the Idler tension knob.
+
+<a href="images/assembly/brass-inserts.jpg"><img alt="brass inserts installed" width="320" src="images/assembly/small/brass-inserts.jpg"/></a>
+
+3. With the PTFE tube in place (this helps to prevent the thin walls from melting!), install the M2.5 brass threaded inserts for the Mosquito.
+4. Install the M3 threaded insert for the Idler tension knob.
 
 ## Prepare the Idler
 
-<a href="images/assembly/cut-idler-shaft.jpg"><img alt="cut idler shaft with cut off" width="320" src="images/assembly/small/cut-idler-shaft.jpg"/></a>
-<a href="images/assembly/insert-idler-shaft.jpg"><img alt="insert idler shaft carefully" width="320" src="images/assembly/small/insert-idler-shaft.jpg"/></a>
-
 1. Cut away the printing support material in the tension knob hole/slot area with an exacto knife.
 1. Place the Bontech idler gear with its two needle bearings into its final location in the idler. The hobbed section of the gear goes in front of the viewing window.
-1. Cut the 32mm x 3mm shaft down to 24mm.
-1. Insert the 24mm x 3mm shaft through the assembly so that it does not protrude from either side of the Idler. Reasonable force is required as these parts are an interference/pretensioned fit.
-1. The idler gear should now spin freely and have a tiny amount of play left to right. 
+
+<a href="images/assembly/cut-idler-shaft.jpg"><img alt="cut idler shaft with cut off" width="320" src="images/assembly/small/cut-idler-shaft.jpg"/></a>
+
+3. Cut the 32mm x 3mm shaft down to 24mm.
+
+<a href="images/assembly/insert-idler-shaft.jpg"><img alt="insert idler shaft carefully" width="320" src="images/assembly/small/insert-idler-shaft.jpg"/></a>
+
+4. Insert the 24mm x 3mm shaft through the assembly so that it does not protrude from either side of the Idler. Reasonable force is required as these parts are an interference/pretensioned fit. The idler gear should now spin freely and have a tiny amount of play left to right. 
 
 ## Assemble the Drive Line
 
+1. Install the bearings in the Motor Plate and Hot End Block. A pencil or pen is a good tool to push them in with.
+
 <a href="images/assembly/insert-reduction-shaft.jpg"><img alt="insert reduction shaft" width="320" src="images/assembly/small/insert-reduction-shaft.jpg"/></a>
+
+2. Place the Bondtech drive gear onto the reduction shaft and install the assembly into the bearing you just placed in the Hot End Block.
+
 <a href="images/assembly/assemble-extruder-body.jpg"><img alt="/assemble extruder body" width="320" src="images/assembly/small/assemble-extruder-body.jpg"/></a>
+
+3. Mate beaing in the Motor Plate to the other end of the shaft.
+4. Insert 3 of the 35mm screws into the location for the stepper motor to use as alignment guides. They pass through the Motor Plate.
+5. Install 2 x 30mm bolts into the bottom of the hot end block. These thread into plastic in the Motor Plate. Start the threads but don't tighten yet.
+
 <a href="images/assembly/install-idler.jpg"><img alt="install idler" width="320" src="images/assembly/small/install-idler.jpg"/></a>
 
-1. Install the bearings in the Motor Plate and Hot End Block. A pencil or pen is a good tool to push them in with.
-1. Place the Bondtech drive gear onto the reduction shaft and install into the Hot End Block.
-1. Mate the Moto Plate to the other end of the shaft.
-1. Install 3 of the 35mm screws into the location for the stepper motor to use as alignment guides. These pass through the Motor Plate.
-1. Install 2 x 30mm bolts into the bottom of the hot end block. These thread into plastic in the Motor Plate. Start the threads but don't tighten yet.
-1. Install the idler with the last 35mm long screw as its pivot. Snug the idler screw but do not over tighten. The idler should swing freely on its pivot. If it doesn't swing freely, you might have a little over extrusion on the idler sides that can be sanded down.
-1. Tighten the two 30mm screws at the bottom now.
+6. Install the idler with the last 35mm long screw as its pivot. Snug the idler screw but do not over tighten. The idler should swing freely on its pivot. If it doesn't swing freely, you might have a little over extrusion on the idler sides that can be sanded down.
+7. Tighten the two 30mm screws at the bottom now.
 
 ## Aligning the Bondtech Gear Train
 
@@ -103,43 +114,53 @@ I suggest using these settings for the extruder parts:
 
 1. Insert a piece of filament through the extruder. It should pass though the hobbed section of the drive gear and hold it in place.
 1. Now you can move the reduction shaft left and right while the drive gear stays in place. Try to center the large black plastic reduction gear between Motor Plate and the Hot End Block.
-2. Tighten the set screw in the Bondtech drive gear to lock in this position.
+1. Tighten the set screw in the Bondtech drive gear to lock in this position.
 
 You should get a free running gear train that does not rub on either of the printed parts when the filament is pulled through the extruder.
 
 ## Final Assembly
 
 <a href="images/assembly/attach-stepper-motor.jpg"><img alt="attach stepper motor" width="320" src="images/assembly/small/attach-stepper-motor.jpg"/></a>
+
 1. Attach the stepper with the 3 x 35mm screws.
 
 <a href="images/assembly/Install-tension-knob.jpg"><img alt="install the tension knob" width="320" src="images/assembly/small/Install-tension-knob.jpg"/></a>
+
 2. Install the idler tension knob.
     1. Prusa says you only need enough tension to get the filament to feed and not slip. At this point you should still be able to insert filament by hand.
 
 <a href="images/assembly/mosquito-screws-loose.jpg"><img alt="mosquito with screws before tightening" height="320" src="images/assembly/small/mosquito-screws-loose.jpg"/></a>
 <a href="images/assembly/mosquito-screws-tight.jpg"><img alt="mosquito with screws fully tightened" height="320" src="images/assembly/small/mosquito-screws-tight.jpg"/></a>
+
 3. Install the Mosquito onto the Hot End Block with the M2.5 x 10mm bolts included with the Mosquito kit (the longest ones). Make sure the heater cartridge/thermistor faces the idler side of the extruder.
 
 <a href="images/assembly/mosquito-cooling-fan.jpg"><img alt="mosquito cooling fan" height="320" src="images/assembly/small/mosquito-cooling-fan.jpg"/></a>
+
 4. Install the fan with its included button head screws and have its wires join up with the thermistor/heater wires.
 
 <a href="images/assembly/inital-wire-routing.jpg"><img alt="inital wire routing" width="320" src="images/assembly/small/inital-wire-routing.jpg"/></a>
+
 5. Use 2 zip ties to hold the hater and fan wires to the wire guide as shown. You can route the thermistor wire in between the heater wires so it stays centered but don't zip tie it at this time.
 
 <a href="images/assembly/toolchanger-plate-attached.jpg"><img alt="toolchanger plate attached" width="320" src="images/assembly/small/toolchanger-plate-attached.jpg"/></a>
+
 5. Attach the E3D ToolChanger plate with the 4 M3 x 10mm screws
 
 <a href="images/assembly/part-cooling-fan.jpg"><img alt="part cooling fan attached" width="320" src="images/assembly/small/part-cooling-fan.jpg"/></a>
+
 7. Attach the 5015 fan with 1 M3 x 20mm screw with washer
 
 <a href="images/assembly/part-cooling-fan-wire-clears-tool-plate.jpg"><img alt="part cooling fan wire clears tool plate area" width="320" src="images/assembly/small/part-cooling-fan-wire-clears-tool-plate.jpg"/></a>
+
 8. Use 2 zip ties to secure the 5015's fan wire to the wire guide. The wire should remain clear of the ToolChanger Tool Plate area.
 
 <a href="images/assembly/cable-support.jpg"><img alt="cable support" width="320" src="images/assembly/small/cable-support.jpg"/></a>
+
 9. Attach the Cable Support with the 2 M3 x 10mm screws.
 10. Install the M3 x 5mm set screw into the hole in the cable support.
 
 <a href="images/assembly/part-cooling-nozzle.jpg"><img alt="part cooling nozzle" width="320" src="images/assembly/small/part-cooling-nozzle.jpg"/></a>
+
 11. Finally attach the part cooling nozzle with an M3 x 15mm screw. 
 
 ## Attaching The Tool
@@ -150,6 +171,7 @@ Connection are be made in the same way that the stock V6 tool. The umbilical cab
 One specific suggestion to keep things neat is to pass a zip tie (pictured in red) behind the thermistor wires  to clamp the thermistor connector in place.
 
 <a href="images/x-cable-mount.jpg"><img alt=" X-Carriage Cable Bracket Installation" width="320" src="images/small/x-cable-mount.jpg"/></a>
+
 The stepper motor will collide with the stock X-Carriage Cable Bracket. An alternative part is included: (Modified X-Carriage Cable Bracket)[STL/X-Carriage Cable Bracket.stl]
 This is a modification the stock E3D part and should be a drop in replacement. 
 
