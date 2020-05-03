@@ -41,6 +41,9 @@ This tool sticks out further from the dock than the stock V6 tool. You'll need t
 ## Z Offset
 You'll also need to tweak the Z offset in `config.g`. I ended up with an offset of about `4.1` with an E3D Nozzle X installed. Be careful and set the offsets correctly to avoid a crash.
 
+## Tool Cooling Cutoff
+Because this extruder is plastic we don't want the cooling fan on the hot end to shut off when the extruder is still hot.
+
 # Printing & Slicing Settings
 
 ##Max Acceleration##
@@ -48,25 +51,24 @@ This needs to be high enough that your extruder can reach your desired retract s
 
 Suggested value: **5000mm/s^2**
 
-That enough acceleration to reach 35mm/s in a 0.4mm retract and stay there for a about ~35% of the distance. If you do longer, slower retracts you might be able to go down on this a bit. 
+The default in Marlin is 10K mm/s^2, double the above value. So I'm probably being conservative here.
 
 Low extruder acceleration has several bad effect on print quality that you can see, including:
 * Weak infill (extruder cannot accelerate fast enough)
 * Over extrusion on solid layers (deceleration not fast enough leading to ooze)
 * Lots of plastic clinging to the nozzle or extra plastic blobs on the part.
 * Bad seams
-* Print speed slows when pressure advance is turned on
 
-If you are having these issues try raising the extruder acceleration even further.
+If you are having these issues try raising the extruder acceleration.
 
 ## Max Instantaneous Acceleration ##
 Also known as "Jerk", this is an exception to regular acceleration. If the change in speed required falls within this range the stepper will be commanded to do it instantly without breaking it up over multiple steps.
 
-Values between 1mm/s and up to 3mm/s seems to work well for this extruder. Duet takes this in minutes so we must multiply by 60:
+Values between 1mm/s and 5mm/s seem to be a good place to start. Duet takes this in mm/minutes so we must multiply by 60:
 
 Suggested value: **90mm/min** (i.e. 1.5mm/s)
 
-High jerk values can cause unnecessary wear on the extruder. You can hear this as clicking/clunking of the extruder gear train as it snaps in the opposite direction on a retract or de-retraction. I've seen profiles setting this as high as 8000 (133mm/s !!). Any value higher than the retract speed should, in theory, negate the acceleration setting. If you set acceleration high enough you wont need to set this very high at all.
+Very high jerk values can cause unnecessary wear on the extruder. You can hear this as clicking/clunking of the extruder gear train as it snaps in the opposite direction on a retract or de-retraction. Conversely, if the value is too low printing will slow down when Pressure Advance is used. If you see slowing you will need to raise the Jerk value and re-tune pressure advance. A jerk value that sounds harsh without pressure advance may end up being too low with it on. This is a conservative stating point. For reference, Marlin defaults this to 5mm/s (300mm/min).
 
 ## Expect to Print Hotter
 You may need to raise the print temp by 5°C to 10°C over what you might have used with a V6. The most noticeable artifacts of low print temps is poor layer adhesion and gaps at seams.
@@ -74,16 +76,12 @@ You may need to raise the print temp by 5°C to 10°C over what you might have u
 I'm not sure if this is related to the cooling fan arrangement, the part cooling fan or the Mosquito's shorter melt zone.
 
 ## Set Retractions Shorter than a V6
-Slice recommend using the nozzle diameter as the retraction ammount. 0.4mm nozzle  == 0.4mm retracts.
+Slice recommends using the nozzle diameter as the retraction amount. 0.4mm nozzle == 0.4mm retracts.
 
-But what about more difficult filaments like PETG? Try starting with just double the nozzle diameter. If you still get stringing try reducing retraction speeds to 25mm/s. (my PETG sweet spot is 0.8mm, 25mm/s) Too much retraction distance can tear the filaments inside the hot zone and lead to bubbles. You will head a "popping" sounds when the bubble is extruded. If you get popping and voids in your prints, try reducing retract length.
+But what about oozy filaments like PETG? Try starting with just double the nozzle diameter. If you still get stringing try reducing retraction speeds to 25mm/s (Thats my PETG sweet spot). Too much retraction distance can tear the filaments inside the melt zone and lead to bubbles. You will head a "popping" sounds when the bubble is extruded. If you get popping and voids in your prints, try reducing retract length.
 
 ## Pressure Advance
-When you have dialed in all of the above variables its time to tune pressure advance with a test print. I like Marlin's [K-Factor test](https://marlinfw.org/tools/lin_advance/k-factor.html). You'll have to edit the .gcode for the Duet but its not hard once you have a slicer set up with custom GCode that you can copy from. A good range of values to test is is probably 0.01s to 0.1s.
-
-Suggested value = **0.055s**
-
-This was found in PETG with 20mm/s vs 80mm/s speeds. Tuen for your preferred material & print speeds.
+When you have dialed in all of the above variables its time to tune pressure advance with a test print. I like Marlin's [K-Factor test](https://marlinfw.org/tools/lin_advance/k-factor.html). You'll have to edit the .gcode for the Duet but its not hard once you have a slicer set up with custom GCode that you can copy from. A good range of values to test is 0.01s to 0.2s. You value will depend on your print setting, speed and the ooziness of your filament. My optimal number in PETG ended up being 0.09.
 
 # Q and A
 ## Will you adapt this design for the E3D V6?
