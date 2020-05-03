@@ -34,6 +34,14 @@ Currently this project is in Beta. Now is a good time to print an extruder and t
 ## Extruder Setup and Printing
 Extruder Setup & Printing](setup.md)
 
+# Related Work
+This design contains modification of 2 parts provided by E3D: 
+
+* [X-Carriage Cable Bracket](https://github.com/e3donline/ToolChanger/blob/master/STLs/X-Carriage%20Cable%20Bracket.stl)
+* [V6 Cable Support](https://github.com/e3donline/ToolChanger/blob/master/V6%20Tool/STLs/V6%20Cable%20Support.stl)
+
+The modifications are just to move the bolt holes to re-position the parts. The source for the changes is available in OnShape. Later versions will aim to remove these parts as they are not central to the design and really not ideal, but they work well enough for now. Thank you E3D for making the designs available under the GPL.
+
 # Q and A
 
 ### Is this done, will there be changes?
