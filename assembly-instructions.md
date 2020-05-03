@@ -1,6 +1,6 @@
 ## Hardware Required
 
-![All required hardware](images/assembly/required-hardware.jpg | width=300)
+<a href="images/assembly/required-hardware.jpg"><img alt="All Required Hardware" width="320" src="images/assembly/small/required-hardware.jpg"/></a>
 
 * [Slice Mosquito Hot End](https://www.sliceengineering.com/collections/mosquito-the-professional-hotend). It does come with all the 2.5mm screws you will need to mount it. Note that the [cooling fan](https://www.sliceengineering.com/collections/accessories/products/fan-for-mosquito-hotend%E2%84%A2), [thermistor](https://www.sliceengineering.com/collections/accessories/products/thermistor-high-temperature) and [heater cartridge](https://www.sliceengineering.com/collections/accessories/products/50w-heater-cartridge) are not included and need to be purchased separately. E3D header cartridges and thermistors will work but the fan is particularly difficult to source so make sure your get that.
 * Bondtech BMG Parts. They can be ordered as 'Spare Parts' directly from Bondtech (or from one of their local distributors like Filastruder) and wont cost as much as an entire BMG extruder:
@@ -32,7 +32,7 @@
 
 ## Printing The Parts
 
-![All 3D printed extruder parts](images/assembly/printed-parts.jpg | width=300)
+<a href="images/assembly/printed-parts.jpg"><img alt="All printed extruder parts" width="320" src="images/assembly/small/printed-parts.jpg"/></a>
 
 Every part has a face that was designed to print down on the print bed to help eliminate the need for supports. The SLT files should correctly orient the parts in your slicer when imported.
 
@@ -46,12 +46,23 @@ I suggest using these settings for the extruder parts:
 
 # Assembly
 ## Prepare the Stepper Motor
+
+<a href="images/assembly/motor-gear.jpg"><img alt="" width="320" src="images/assembly/small/motor-gear.jpg"/></a>
+
 1. Install the drive gear on the stepper shaft so the toothed end faces the stepper and just clears the face of the stepper.
 
 ## Mosquito Preparation
+
+<a href="images/assembly/mosquito-built.jpg"><img alt="" width="320" src="images/assembly/small/mosquito-built.jpg"/></a>
+
 1. Install the heater and thermistor in the orientation shown. Follow Slice Engineerings instructions for doing this.
 
 ## Prepare the Hot End Block
+
+<a href="images/assembly/install-magnet.jpg"><img alt="" width="320" src="images/assembly/small/install-magnet.jpg"/></a>
+<a href="images/assembly/how-to-cut-ptfe.jpg"><img alt="" width="320" src="images/assembly/small/how-to-cut-ptfe.jpg"/></a>
+<a href="images/assembly/brass-inserts.jpg"><img alt="" width="320" src="images/assembly/small/brass-inserts.jpg"/></a>
+
 1. Install the magnet in the Hot End Block. It should be a press fit. Verify the magnet polarity with the Dock before installing. Use some thin CA glue to lock the magnet in permanently if desired. There is a hole in in the block that allows the magnet to be pushed out if polarity is wrong and for glue to get in.
 1. The extruder uses a very short length of PTFE tube to guide the filament into the Mosquito. The PTFE needs to be cut for length such that it fits into the 1mm deep pocket on top of the Mosquito, here is how to do that easily without measuring:
 	1. Start with a longer length of PTFE tube thats easier to handle (30+mm).
@@ -62,6 +73,10 @@ I suggest using these settings for the extruder parts:
 1. Install the M3 threaded insert for the Idler tension knob.
 
 ## Prepare the Idler
+
+<a href="images/assembly/cut-idler-shaft.jpg"><img alt="" width="320" src="images/assembly/small/cut-idler-shaft.jpg"/></a>
+<a href="images/assembly/insert-idler-shaft.jpg"><img alt="" width="320" src="images/assembly/small/insert-idler-shaft.jpg"/></a>
+
 1. Cut away the printing support material in the tension knob hole/slot area with an exacto knife.
 1. Place the Bontech idler gear with its two needle bearings into its final location in the idler. The hobbed section of the gear goes in front of the viewing window.
 1. Cut the 32mm x 3mm shaft down to 24mm.
@@ -69,6 +84,11 @@ I suggest using these settings for the extruder parts:
 1. The idler gear should now spin freely and have a tiny amount of play left to right. 
 
 ## Assemble the Drive Line
+
+<a href="images/assembly/insert-reduction-shaft.jpg"><img alt="" width="320" src="images/assembly/small/insert-reduction-shaft.jpg"/></a>
+<a href="images/assembly/assemble-extruder-body.jpg"><img alt="" width="320" src="images/assembly/small/assemble-extruder-body.jpg"/></a>
+<a href="images/assembly/install-idler.jpg"><img alt="" width="320" src="images/assembly/small/install-idler.jpg"/></a>
+
 1. Install the bearings in the Motor Plate and Hot End Block. A pencil or pen is a good tool to push them in with.
 1. Place the Bondtech drive gear onto the reduction shaft and install into the Hot End Block.
 1. Mate the Moto Plate to the other end of the shaft.
@@ -78,6 +98,9 @@ I suggest using these settings for the extruder parts:
 1. Tighten the two 30mm screws at the bottom now.
 
 ## Aligning the Bondtech Gear Train
+
+<a href="images/assembly/align-bondtech-gear-with-filament.jpg"><img alt="" width="320" src="images/assembly/small/align-bondtech-gear-with-filament.jpg"/></a>
+
 1. Insert a piece of filament through the extruder. It should pass though the hobbed section of the drive gear and hold it in place.
 1. Now you can move the reduction shaft left and right while the drive gear stays in place. Try to center the large black plastic reduction gear between Motor Plate and the Hot End Block.
 2. Tighten the set screw in the Bondtech drive gear to lock in this position.
@@ -85,6 +108,19 @@ I suggest using these settings for the extruder parts:
 You should get a free running gear train that does not rub on either of the printed parts when the filament is pulled through the extruder.
 
 ## Final Assembly
+
+<a href="images/assembly/attach-stepper-motor.jpg"><img alt="" width="320" src="images/assembly/small/attach-stepper-motor.jpg"/></a>
+<a href="images/assembly/Install-tension-knob.jpg"><img alt="" width="320" src="images/assembly/small/Install-tension-knob.jpg"/></a>
+<a href="images/assembly/mosquito-screws-loose.jpg"><img alt="" width="320" src="images/assembly/small/mosquito-screws-loose.jpg"/></a>
+<a href="images/assembly/mosquito-screws-tight.jpg"><img alt="" width="320" src="images/assembly/small/mosquito-screws-tight.jpg"/></a>
+<a href="images/assembly/mosquito-cooling-fan.jpg"><img alt="" width="320" src="images/assembly/small/mosquito-cooling-fan.jpg"/></a>
+<a href="images/assembly/inital-wire-routing.jpg"><img alt="" width="320" src="images/assembly/small/inital-wire-routing.jpg"/></a>
+<a href="images/assembly/toolchanger-plate-attached.jpg"><img alt="" width="320" src="images/assembly/small/toolchanger-plate-attached.jpg"/></a>
+<a href="images/assembly/part-cooling-fan.jpg"><img alt="" width="320" src="images/assembly/small/part-cooling-fan.jpg"/></a>
+<a href="images/assembly/part-cooling-fan-wire-clears-tool-plate.jpg"><img alt="" width="320" src="images/assembly/small/part-cooling-fan-wire-clears-tool-plate.jpg"/></a>
+<a href="images/assembly/cable-support.jpg"><img alt="" width="320" src="images/assembly/small/cable-support.jpg"/></a>
+<a href="images/assembly/part-cooling-nozzle.jpg"><img alt="" width="320" src="images/assembly/small/part-cooling-nozzle.jpg"/></a>
+
 1. Attach the stepper with the 3 x 35mm screws.
 1. Install the idler tension knob.
     1. Prusa says you only need enough tension to get the filament to feed and not slip. At this point you should still be able to insert filament by hand.
@@ -100,5 +136,7 @@ You should get a free running gear train that does not rub on either of the prin
 
 ## Attaching The Tool
 Connection are be made in the same way that the stock V6 tool. The umbilical cable needs to be modified to get a stepper drive cable to the extruder. This is not something that I'm going to try and cover here.
+
+<a href="images/assembly/cable-routing-tip.jpg"><img alt="" width="320" src="images/assembly/small/cable-routing-tip.jpg"/></a>
 
 One specific suggestion to keep things neat is to pass a zip tie (pictured in red) behind the thermistor wires  to clamp the thermistor connector in place.
