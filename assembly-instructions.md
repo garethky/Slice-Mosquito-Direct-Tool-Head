@@ -99,7 +99,7 @@ I suggest using these settings for the extruder parts:
 
 <a href="https://raw.githubusercontent.com/garethky/Slice-Mosquito-Direct-Tool-Head/master/images/assembly/assemble-extruder-body.jpg"><img alt="/assemble extruder body" width="320" src="images/assembly/small/assemble-extruder-body.jpg"/></a>
 
-3. Mate beaing in the Motor Plate to the other end of the shaft.
+3. Mate bearing in the Motor Plate to the other end of the shaft.
 4. Insert 3 of the 35mm screws into the location for the stepper motor to use as alignment guides. They pass through the Motor Plate.
 5. Install 2 x 30mm bolts into the bottom of the hot end block. These thread into plastic in the Motor Plate. Start the threads but don't tighten yet.
 
