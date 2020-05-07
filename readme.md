@@ -32,7 +32,7 @@ Currently this project is in Beta. Now is a good time to print an extruder and t
 [Assembly Instructions](assembly-instructions.md)
 
 ## Extruder Setup and Printing
-Extruder Setup & Printing](setup.md)
+[Extruder Setup & Printing](setup.md)
 
 # Related Work
 This design contains modification of 2 parts provided by E3D: 
