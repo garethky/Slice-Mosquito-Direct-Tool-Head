@@ -2,33 +2,37 @@
 
 <a href="images/assembly/required-hardware.jpg"><img alt="all required hardware" width="320" src="images/assembly/small/required-hardware.jpg"/></a>
 
-* [Slice Mosquito Hot End](https://www.sliceengineering.com/collections/mosquito-the-professional-hotend). It does come with all the 2.5mm screws you will need to mount it. Note that the [cooling fan](https://www.sliceengineering.com/collections/accessories/products/fan-for-mosquito-hotend%E2%84%A2), [thermistor](https://www.sliceengineering.com/collections/accessories/products/thermistor-high-temperature) and [heater cartridge](https://www.sliceengineering.com/collections/accessories/products/50w-heater-cartridge) are not included and need to be purchased separately. E3D header cartridges and thermistors will work but the fan is particularly difficult to source so make sure your get that.
+* [Slice Mosquito Hot End](https://www.sliceengineering.com/collections/mosquito-the-professional-hotend). It does come with all the 2.5mm screws you will need to mount it. Note that the [cooling fan](https://www.sliceengineering.com/collections/accessories/products/fan-for-mosquito-hotend%E2%84%A2), [thermistor](https://www.sliceengineering.com/collections/accessories/products/thermistor-high-temperature) and [heater cartridge](https://www.sliceengineering.com/collections/accessories/products/50w-heater-cartridge) are not included and need to be purchased separately. E3D heater cartridges and thermistors will work.
+* A 40mm fan such as [Noctua NF-A4x10 FLX](https://www.amazon.com/dp/B009NQLT0M)
 * Bondtech BMG Parts. They can be ordered as 'Spare Parts' directly from Bondtech (or from one of their local distributors like Filastruder) and wont cost as much as an entire BMG extruder:
     * 1 x [Bondtech Gear Kit 1.75/5.0](https://www.bondtech.se/en/product/drivegear-kits/) thats for 1.75mm filament and M5 shafts. The idler shaft included in the kit will no be used.
     * 1 x [Motor Gear](https://www.bondtech.se/en/product/motor-gear/)
     * 1 x [Reduction Shaft Assembly](https://www.bondtech.se/en/product/shaft-assembly/)
     * 1 x [3.0 x 32mm Shaft](https://www.bondtech.se/en/product/shafts/) You will need to cut this down to 24mm to be used as the idler shaft. This is the same size that Prusa use in their MK3 idler design. It's not a standard Bondtech part.
     * 2 x [5mm x 8mm x 2.5mm Bearings](https://www.bondtech.se/en/product/ballbearing-5x8x2-5/)
-    * 1 x [Thumb Screw Assembly](https://www.bondtech.se/en/product-category/spare-parts/bondtech-spare-parts/thumbscrew-assembly/)
+    * 1 x [Thumb Screw Assembly](https://www.bondtech.se/en/product-category/spare-parts/bondtech-spare-parts/thumbscrew-assembly/) (required to get the spring and plastic washer)
+    * 1 x [Push fit ecas 4mm] ( https://www.bondtech.se/en/product/push-fit-ecas-4mm/) optional
 * A NEMA 17 stepper, preferably a "pancake" 25mm stepper, such as the [LDO-42STH25-1404MAC](https://www.bondtech.se/en/product/nema-17-motor-slim-power-ldo-42sth25-1404mac-0-9-degree/)
 * Hardware 
     * M3 socket head cap screws:
         * 4 x 35mm
         * 2 x 30mm
         * 1 x 20mm with washer (a button head would also work)
+        * 1 x 20mm (for tension, if not using the thumb screw)
         * 1 x 15mm
         * 2 x 10mm
+        * 3 * 12mm
     * 4 x M3 x 10mm Flat Head Cap Screws
     * 1 x M3 x 5mm set screw
     * Melt in Brass inserts for plastics
         * 2 x M2.5 x 5.5mm brass inserts, such as these: https://www.amazon.com/dp/B07NBPGTY2
         * 1 x M3 x 4mm brass threaded insert, such as these: https://www.amazon.com/dp/B077CJV3Z9
         * Note: dont cheap out on these parts as they are safety critical, [see testing by CNC Kitchen](https://www.youtube.com/watch?v=G-UF4tv3Hvc).
-* Short length of PTFE tubing (~30mm)
+* Short length of PTFE tubing (~35mm)
 * 8mm x 3mm Magnet (This size is [not uncommon](https://www.amazon.com/s?k=8mm+x+3mm+neodymium+magnets))
 * 7+ small zip ties
 * E3D ToolChanger [Tool Plate](https://e3d-online.com/toolchanger-blank-plate)
-* A 5015 24V cooling fan such as [this one](https://www.amazon.com/dp/B07WFKPLWY).
+* A 5015 24V cooling fan such as [this one](https://www.amazon.com/dp/B07WFKPLWY)
 
 ## Printing The Parts
 
@@ -36,7 +40,7 @@
 
 Every part has a face that was designed to print down on the print bed to help eliminate the need for supports. The SLT files should correctly orient the parts in your slicer when imported.
 
-The extruder parts were designed to be printed in PETG. But the Fan Nozzle should only be printed in ASA, ABS or another hight temp filament.
+The extruder parts were designed to be printed in PETG. But the Fan Nozzle and Fan Shroud should only be printed in ASA, ABS, PC or another hight temp filament.
 
 I suggest using these settings for the extruder parts:
 * 0.4mm nozzle
