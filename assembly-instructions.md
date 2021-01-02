@@ -11,7 +11,7 @@
     * 1 x [3.0 x 32mm Shaft](https://www.bondtech.se/en/product/shafts/) You will need to cut this down to 24mm to be used as the idler shaft. This is the same size that Prusa use in their MK3 idler design. It's not a standard Bondtech part.
     * 2 x [5mm x 8mm x 2.5mm Bearings](https://www.bondtech.se/en/product/ballbearing-5x8x2-5/)
     * 1 x [Thumb Screw Assembly](https://www.bondtech.se/en/product-category/spare-parts/bondtech-spare-parts/thumbscrew-assembly/) (required to get the spring and plastic washer)
-    * 1 x [Push fit ecas 4mm] ( https://www.bondtech.se/en/product/push-fit-ecas-4mm/) optional
+    * 1 x [Push fit ecas 4mm]( https://www.bondtech.se/en/product/push-fit-ecas-4mm/) optional
 * A NEMA 17 stepper, preferably a "pancake" 25mm stepper, such as the [LDO-42STH25-1404MAC](https://www.bondtech.se/en/product/nema-17-motor-slim-power-ldo-42sth25-1404mac-0-9-degree/)
 * Hardware 
     * M3 socket head cap screws:
@@ -27,7 +27,7 @@
     * Melt in Brass inserts for plastics
         * 2 x M2.5 x 5.5mm brass inserts, such as these: https://www.amazon.com/dp/B07NBPGTY2
         * 1 x M3 x 4mm brass threaded insert, such as these: https://www.amazon.com/dp/B077CJV3Z9
-        * Note: dont cheap out on these parts as they are safety critical, [see testing by CNC Kitchen](https://www.youtube.com/watch?v=G-UF4tv3Hvc).
+        * Note: don't cheap out on these parts as they are safety critical, [see testing by CNC Kitchen](https://www.youtube.com/watch?v=G-UF4tv3Hvc).
 * Short length of PTFE tubing (~35mm)
 * 8mm x 3mm Magnet (This size is [not uncommon](https://www.amazon.com/s?k=8mm+x+3mm+neodymium+magnets))
 * 7+ small zip ties
@@ -103,7 +103,7 @@ I suggest using these settings for the extruder parts:
 
 <a href="images/assembly/assemble-extruder-body.jpg"><img alt="/assemble extruder body" width="320" src="images/assembly/small/assemble-extruder-body.jpg"/></a>
 
-3. Mate beaing in the Motor Plate to the other end of the shaft.
+3. Mate bearing in the Motor Plate to the other end of the shaft.
 4. Insert 3 of the 35mm screws into the location for the stepper motor to use as alignment guides. They pass through the Motor Plate.
 5. Install 2 x 30mm bolts into the bottom of the hot end block. These thread into plastic in the Motor Plate. Start the threads but don't tighten yet.
 
