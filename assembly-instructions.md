@@ -2,8 +2,12 @@
 
 <a href="images/assembly/required-hardware.jpg"><img alt="all required hardware" width="320" src="images/assembly/small/required-hardware.jpg"/></a>
 
-* [Slice Mosquito Hot End](https://www.sliceengineering.com/collections/mosquito-the-professional-hotend). It does come with all the 2.5mm screws you will need to mount it. Note that the [cooling fan](https://www.sliceengineering.com/collections/accessories/products/fan-for-mosquito-hotend%E2%84%A2), [thermistor](https://www.sliceengineering.com/collections/accessories/products/thermistor-high-temperature) and [heater cartridge](https://www.sliceengineering.com/collections/accessories/products/50w-heater-cartridge) are not included and need to be purchased separately. E3D heater cartridges and thermistors will work.
-* A 40mm fan such as [Noctua NF-A4x10 FLX](https://www.amazon.com/dp/B009NQLT0M)
+* [Slice Mosquito Hot End](https://www.sliceengineering.com/collections/mosquito-the-professional-hotend). It does come with all the 2.5mm screws you will need to mount it. Note that the [thermistor](https://www.sliceengineering.com/collections/accessories/products/thermistor-high-temperature) and [heater cartridge](https://www.sliceengineering.com/collections/accessories/products/50w-heater-cartridge) are not included and need to be purchased separately.
+* Hot end cooling fan: you have options depending on your requirements
+    * The 40mm [Noctua NF-A4x10 FLX](https://www.amazon.com/dp/B009NQLT0M) is the quietest and most expensive choice
+    * The Sunon [MF40101VX-1000U-G99](https://www.digikey.com/en/products/detail/sunon-fans/MF40101VX-1000U-G99/6564863) a fan with higher static pressure that is better for encosed opperations
+    * The stock [Slice Engineering fan](https://www.sliceengineering.com/products/fan-for-mosquito-hotend%E2%84%A2) is the noisiest choice but doesnt require the fan shoud adapter
+* A 5015 cooling fan such as [this one](https://www.amazon.com/dp/B07WFKPLWY)
 * Bondtech BMG Parts. They can be ordered as 'Spare Parts' directly from Bondtech (or from one of their local distributors like Filastruder) and wont cost as much as an entire BMG extruder:
     * 1 x [Bondtech Gear Kit 1.75/5.0](https://www.bondtech.se/en/product/drivegear-kits/) thats for 1.75mm filament and M5 shafts. The idler shaft included in the kit will no be used.
     * 1 x [Motor Gear](https://www.bondtech.se/en/product/motor-gear/)
@@ -24,15 +28,16 @@
         * 3 * 12mm
     * 4 x M3 x 10mm Flat Head Cap Screws
     * 1 x M3 x 5mm set screw
-    * Melt in Brass inserts for plastics
-        * 2 x M2.5 x 5.5mm brass inserts, such as these: https://www.amazon.com/dp/B07NBPGTY2
-        * 1 x M3 x 4mm brass threaded insert, such as these: https://www.amazon.com/dp/B077CJV3Z9
-        * Note: don't cheap out on these parts as they are safety critical, [see testing by CNC Kitchen](https://www.youtube.com/watch?v=G-UF4tv3Hvc).
+    * Melt in brass inserts for plastics:
+        * 2 x M2.5 x 5.5mm brass inserts, such as these: https://www.mcmaster.com/94180A323/
+        * 1 x M3 x 4mm brass threaded insert, such as these: https://www.mcmaster.com/94180A331/
+        * Note: don't cheap out on these parts as they are safety critical, [see testing by CNC Kitchen](https://www.youtube.com/watch?v=G-UF4tv3Hvc). you can often find them in assortments in smaller quantenties on Amazon or similar.
 * Short length of PTFE tubing (~35mm)
-* 8mm x 3mm Magnet (This size is [not uncommon](https://www.amazon.com/s?k=8mm+x+3mm+neodymium+magnets))
-* 7+ small zip ties
+* 8mm x 3mm Magnet (This size is [not uncommon](https://www.amazon.com/s?k=8mm+x+3mm+neodymium+magnets) )
+* 6+ small zip ties
 * E3D ToolChanger [Tool Plate](https://e3d-online.com/toolchanger-blank-plate)
-* A 5015 24V cooling fan such as [this one](https://www.amazon.com/dp/B07WFKPLWY)
+
+
 
 ## Printing The Parts
 
@@ -45,7 +50,7 @@ The extruder parts were designed to be printed in PETG. But the Fan Nozzle and F
 I suggest using these settings for the extruder parts:
 * 0.4mm nozzle
 * 0.2mm layer height
-* 3 perimeters (hot melt inserts need some material to melt into)
+* At least 3 perimeters (hot melt inserts need some material to melt into)
 * 20% Gyroid or Grid infill
 
 # Assembly
